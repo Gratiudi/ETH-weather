@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ETH-weather</title>
     <link rel="stylesheet" href="style.css" class="css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="body">
@@ -17,15 +18,15 @@
       <h1>London,<span>UK</span></h1>
       <main>
         <div class="current-temperature">
-          <span class="icon">☀️</span> <span class="value">24</span>
+          <span class="icon">☀️</span> <span id="value">24</span>
           <span class="degree">°C</span>
           <button>°F</button>
         </div>
         <p class="current-details">
           <span id="current-date">Thursday 00:00</span>
-          <span id="details">
+          <span class="details">
             <br />
-            moderate rain <br />
+            <span id="details"> moderate rain</span> <br />
             <span class="humidity-wind">
               Humidity: <strong>87%</strong>, Wind:
               <strong>7.2km/h</strong></span

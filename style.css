@@ -37,7 +37,7 @@ h1 {
   border: 1px solid rgb(248, 127, 248);
   border-radius: 10px;
 }
-.current-temperature .value {
+.current-temperature #value {
   font-size: 70px;
   position: relative;
   top: -5px;
@@ -54,11 +54,20 @@ h1 {
 .current-temperature button {
   background-color: white;
   border: 0.5px solid rgb(248, 127, 248);
-  font-size: 15px;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 1px;
   position: relative;
-  top: -38px;
+  top: -40px;
   left: -4.5px;
   color: rgb(248, 127, 248);
+}
+#submit:hover {
+  background-color: rgb(247, 164, 247);
+}
+button:hover {
+  color: rgb(247, 183, 247);
+  background-color: purple;
 }
 #current-date {
   position: relative;
@@ -68,7 +77,7 @@ h1 {
   font-size: 25px;
   font-weight: 600;
 }
-#details {
+.details {
   font-size: 17px;
   font-family: Lucida Sans Typewriter;
   font-weight: 600;
