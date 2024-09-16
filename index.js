@@ -1,10 +1,16 @@
 function getWeather(response) {
+  console.log(response);
   let h1 = document.querySelector("h1");
   h1.innerHTML = response.data.city + "," + response.data.country;
   temperature = document.querySelector("#value");
   temperature.innerHTML = Math.round(response.data.temperature.current);
   let description = document.querySelector("#details");
   description.innerHTML = response.data.condition.description;
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = response.data.temperature.humidity;
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = response.data.wind.speed;
+  let icon = `<img src="${response.data.condition.icon_url}" class="icon-img"/>`;
 }
 function searchCities(event) {
   event.preventDefault();
@@ -13,6 +19,12 @@ function searchCities(event) {
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
   axios.get(apiUrl).then(getWeather);
 }
+axios
+  .get(
+    "https://api.shecodes.io/weather/v1/current?query=Tokyo&key=fb05o0ab323256cef37t4ba2f5c3a9ed"
+  )
+  .then(getWeather);
+
 function fahrenheit() {
   let temp = document.querySelector("#value");
   let temp1 = (temp.innerText * 9) / 5 + 32;
