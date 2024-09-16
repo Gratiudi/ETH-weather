@@ -1,0 +1,89 @@
+body {
+  background-color: #f9f7fe;
+}
+.body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+}
+main {
+  display: flex;
+  justify-content: space-between;
+}
+h1 {
+  font-size: 40px;
+  margin-bottom: 0;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+}
+#city {
+  color: rgb(113, 111, 111);
+  width: 50%;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+
+  border-radius: 7px;
+  background-color: #f9f7fe;
+}
+#submit {
+  width: 15%;
+  font-size: 16px;
+  padding: 12px;
+  color: purple;
+  background-color: rgb(248, 127, 248);
+  border: 1px solid rgb(248, 127, 248);
+  border-radius: 10px;
+}
+.current-temperature .value {
+  font-size: 70px;
+  position: relative;
+  top: -5px;
+}
+.current-temperature .icon {
+  font-size: 70px;
+}
+.current-temperature .degree {
+  padding-right: 7px;
+  font-size: 23px;
+  position: relative;
+  top: -35px;
+}
+.current-temperature button {
+  background-color: white;
+  border: 0.5px solid rgb(248, 127, 248);
+  font-size: 15px;
+  position: relative;
+  top: -38px;
+  left: -4.5px;
+  color: rgb(248, 127, 248);
+}
+#current-date {
+  position: relative;
+  top: -10px;
+  left: -10px;
+  color: purple;
+  font-size: 25px;
+  font-weight: 600;
+}
+#details {
+  font-size: 17px;
+  font-family: Lucida Sans Typewriter;
+  font-weight: 600;
+}
+.current-details {
+  padding: 15px;
+  border-left: 1px solid purple;
+}
+.humidity-wind {
+  font-size: 15px;
+  font-weight: lighter;
+}
+.humidity-wind strong {
+  color: rgb(248, 127, 248);
+}
+footer {
+  font-size: 12px;
+}
