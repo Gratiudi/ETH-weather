@@ -10,7 +10,8 @@ function getWeather(response) {
   humidity.innerHTML = response.data.temperature.humidity;
   let wind = document.querySelector("#wind");
   wind.innerHTML = response.data.wind.speed;
-  let icon = `<img src="${response.data.condition.icon_url}" class="icon-img"/>`;
+  let icon = document.querySelector("#icon");
+  icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="icon-img"/>`;
 }
 function searchCities(event) {
   event.preventDefault();

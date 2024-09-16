@@ -42,8 +42,10 @@ h1 {
   position: relative;
   top: -5px;
 }
-.current-temperature .icon {
+#icon {
   font-size: 70px;
+  position: relative;
+  top: 15px;
 }
 .current-temperature .degree {
   padding-right: 7px;
