@@ -59,8 +59,25 @@ function formatDate(date) {
   }
   return `${day} ${hour}:${minute}`;
 }
-
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+  let days = ["Wed", "Thurs", "Fri", "Sat", "Sun"];
+  let forecastElements = "";
+  days.forEach(function (day) {
+    forecastElements =
+      forecastElements +
+      `<div class="forecast-day">
+  <div class="forecast-date">${day}</div>
+  <div class="forecast-icon">⛈️</div>
+  <div class="forecast-values">
+    <strong>16°</strong> 12°
+  </div>
+</div>`;
+  });
+  forecast.innerHTML = forecastElements;
+}
 let date = document.querySelector("#current-date");
 date.innerHTML = formatDate(today);
 let button = document.querySelector("button");
 button.addEventListener("click", fahrenheit);
+displayForecast();
